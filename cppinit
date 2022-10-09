@@ -1,0 +1,11 @@
+#!/bin/bash
+
+default="main.cpp"
+client=${1:-$default}
+
+echo "#include <iostream>" >> $client
+echo "" >> $client
+echo "int main(int argc, char** argv) {" >> $client
+echo -e "\t" >> $client
+echo -e "\treturn 0;" >> $client
+echo "}" >> $client

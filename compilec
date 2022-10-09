@@ -1,0 +1,17 @@
+#!/bin/bash
+
+CFILES=$(find -name "*.c")
+for file in $CFILES
+do
+    gcc -c $file
+done
+
+CPPFILES=$(find -name "*.cpp")
+for file in $CPPFILES
+do
+    g++ -c $file
+done
+
+gcc -o build *.o -lm
+
+rm -rf *.o
